@@ -14,7 +14,7 @@ describe('Realm App Flow', () => {
     cy.location('href', {timeout:20000})
       .should('include', 'cloud-qa')  
 
-    cy.get('a[href*="realm-qa"', {timeout:10000}).click()
+    cy.get('a[href*="realm-qa"', {timeout:10000}).wait(3000).click()
 
     // Check that our navigation resolves within 20 seconds.
     // This is an absurdly long amount of time, and can likely be lowered to 5 seconds.
@@ -22,7 +22,7 @@ describe('Realm App Flow', () => {
       .should('include','realm-qa')
 
     cy.get('.template-card-container', {timeout:20000})
-    cy.screenshot('realm-create-new-app')
+    cy.wait(2000).screenshot('realm-create-new-app')
 
   
   })
@@ -42,15 +42,15 @@ describe('Realm App Flow', () => {
     cy.location('href', {timeout:20000})
       .should('include', 'cloud-qa')  
 
-    cy.get('a[href*="realm-qa"', {timeout:10000}).click()
+    cy.get('a[href*="realm-qa"', {timeout:10000}).wait(3000).click()
 
     // Check that our navigation resolves within 20 seconds.
     // This is an absurdly long amount of time, and can likely be lowered to 5 seconds.
     cy.location('href', {timeout:20000})
       .should('include','realm-qa')
 
-    cy.get('.template-card-container', {timeout:20000})
-    cy.screenshot('realm-create-new-app')
+    cy.get('.app-card', {timeout:20000})
+    cy.wait(2000).screenshot('realm-with-existing-applications')
 
   
   })
