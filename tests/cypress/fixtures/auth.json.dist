@@ -1,4 +1,12 @@
 {
-  "testUser": "",
-  "testPass": ""
+  "realmUI": {
+    "userNoApplications": {
+      "name": "",
+      "pass": ""
+    }
+    "userWithApplications": {
+      "name": "",
+      "pass": ""
+    }
+  }
 }

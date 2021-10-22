@@ -1,5 +1,5 @@
 {
-  "name": "cypress-starter-kit",
+  "name": "docs-asset-automation",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,8 @@
   },
   "scripts": {
     "cypress": "cypress run",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "start": "cypress run"
   },
   "repository": {
     "type": "git",
@@ -17,8 +18,6 @@
   "keywords": [
     ""
   ],
-  "author": "James Sheasby Thomas (@RightSaidJames)",
-  "license": "MIT",
   "devDependencies": {
     "cypress": "^8.5.0"
   }

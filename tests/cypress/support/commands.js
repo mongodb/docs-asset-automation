@@ -25,15 +25,14 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('login', (user, password) => {
-  
-  // Replace with your app's login page URL
-  // or use cy.get('#my-account-button').click() command (or similar) to open a login modal
-  cy.visit('/login')
-
+  // Generic login harness
+  // Designed to log us into Atlas Cloud in the QA environment
+  cy.visit('https://account-qa.mongodb.com/account/login')
   cy.get('input[name="username"]').type(user)
+  cy.get('button[name="login"]').click()
   cy.get('input[name="password"]').type(password)
+  cy.get('button[name="login"]').click()
 
-  cy.get('form#login').submit()
 })
 
 Cypress.Commands.add('viewportPreset', (size = '') => {
