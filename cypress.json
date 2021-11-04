@@ -1,10 +1,10 @@
 {
     "baseUrl": "https://cloud-qa.mongodb.com",
     "chromeWebSecurity": false,
-    "fixturesFolder": "tests/cypress/fixtures",
-    "integrationFolder": "tests/cypress/workflows",
-    "pluginsFile": "tests/cypress/plugins/index.js",
-    "screenshotsFolder": "tests/cypress/screenshots",
-    "supportFile": "tests/cypress/support/index.js",
-    "videosFolder": "tests/cypress/videos"
+    "fixturesFolder": "cypress/fixtures",
+    "integrationFolder": "cypress/workflows",
+    "pluginsFile": "cypress/plugins/index.js",
+    "screenshotsFolder": "screenshots",
+    "supportFile": "cypress/support/index.js",
+    "videosFolder": "videos"
 }
