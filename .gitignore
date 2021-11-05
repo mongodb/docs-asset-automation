@@ -2,6 +2,7 @@
 # Directories
 node_modules/
 cypress/screenshots/
+snapshots/__diff_output__
 videos
 
 # Files

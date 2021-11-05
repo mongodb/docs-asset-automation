@@ -19,6 +19,7 @@
     ""
   ],
   "devDependencies": {
-    "cypress": "^8.5.0"
+    "cypress": "^8.6.0",
+    "cypress-image-snapshot": "^4.0.1"
   }
 }

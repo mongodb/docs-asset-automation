@@ -1,4 +1,4 @@
-describe('Realm App Flow', () => {
+describe('Realm App Flow without active applications', () => {
   it('Establish a session and navigate to a Realm instance without active applications', () => {
     cy.viewportPreset('full-hd')
 
@@ -22,11 +22,14 @@ describe('Realm App Flow', () => {
       .should('include','realm-qa')
 
     cy.get('.template-card-container', {timeout:20000})
-    cy.wait(2000).screenshot('realm-create-new-app')
+
+    cy.wait(2000).get('.activate-app-card-create-app').matchImageSnapshot('realm-create-new-app')
 
   
   })
+})
 
+describe('Realm App Flow with an active application', () => {
   it('Establish a session and navigate to a Realm instance with active applications', () => {
     cy.viewportPreset('full-hd')
 
@@ -50,7 +53,7 @@ describe('Realm App Flow', () => {
       .should('include','realm-qa')
 
     cy.get('.app-card', {timeout:20000})
-    cy.wait(2000).screenshot('realm-with-existing-applications')
+    cy.wait(2000).matchImageSnapshot('realm-with-existing-applications')
 
   
   })
